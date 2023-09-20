@@ -3,7 +3,7 @@
 
 ## Clustering Project
 
-![banner](reports/figures/imagem1.jpg)
+![banner](reports/figures/logo_all_in_one.png)
 
 #### This project was made by Luan Maieski.
 
@@ -154,6 +154,4 @@ O objetivo de obter uma seleção de clientes mais valiosos para a empresa foi c
     - Adquirir mais informações do negócio para poder gerar mais insights.
     - Melhorar o Dashboard de acompanhamento com mais informações relevantes.
     
-# LICENSE
 
-# All Rights Reserved - Comunidade DS 2023
