@@ -8,7 +8,7 @@
 #### This project was made by Luan Maieski.
 
 # 1. Problema de Negócio.
-A empresa All In One Place é uma empresa Outlet Multimarcas,que comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
+A empresa All In One Place é uma empresa Outlet Multimarcas, que comercializa produtos de segunda linha de várias marcas a um preço menor, através de um e-commerce.
 
 Em um pouco mais de 1 ano de operação, o time de marketing percebeu que alguns clientes da sua base, compram produtos mais caros, com alta frequência e acabam contribuindo com uma parcela significativa do faturamento da empresa.
 
@@ -49,7 +49,7 @@ A estratégia para fazer esse projeto teve como base a metodologia CRISP-DS segu
 * Estatística descritiva para identificar possíveis problemas nos dados.
 
 **Step 02. Data Filtering:**
-* Filtrar os dados, removendo dados que não trarão nenum ganho de informação; remover dados que não fazem sentido para o negócio.
+* Filtrar os dados, removendo dados que não trarão nenhum ganho de informação; remover dados que não fazem sentido para o negócio.
 
 **Step 03. Feature Engineering:**
 * Criação de novas features para ajudar no aprendizado do modelo e responder as questões de negócio. 
@@ -62,30 +62,30 @@ A estratégia para fazer esse projeto teve como base a metodologia CRISP-DS segu
 * Fazer as transformações necessárias para o aprendizado do modelo.
 
 **Step 06. Estudo do Espaço:**
-* Realizar o estudo do espaço craindo embeddings que mostrem os dados de uma forma mais organizada
+* Realizar o estudo do espaço criando embeddings que mostrem os dados de uma forma mais organizada.
 
 **Step 07. Hyperparameter Fine Tunning:**
-* Treinar os modelos de machine learning com diferentes valores de K(cluster)
-* Avaliar a performance com a métrica SS(Silhouette Score) para ver o melhor valor de K 
-* Comparar o resultado dos modelos e escolher o modelo e o valor de K que tem a melhor performance e que possa ajudar nas decisões de negócio
+* Treinar os modelos de machine learning com diferentes valores de K(cluster).
+* Avaliar a performance com a métrica SS(Silhouette Score) para ver o melhor valor de K.
+* Comparar o resultado dos modelos e escolher o modelo e o valor de K que tem a melhor performance e que possa ajudar nas decisões de negócio.
 
 **Step 08. Machine Learning Modelling:**
-* Treinar o algoritmo escolhido, com o número de k escolhido, no espaço escolhido
+* Treinar o algoritmo escolhido, com o número de k escolhido, no espaço escolhido.
 
 **Step 09. Convert Model Performance to Business Values:**
 * Criar tabela dos clientes por grupo.
 * Identificar as características de cada grupo.
 
 **Step 10. Business Questions:**
-* Criar o MindMap de Hipóteses
-* Criar e validar as hipóteses que tem dados disponíveis
-* Responder as perguntas de negócio
+* Criar o MindMap de Hipóteses.
+* Criar e validar as hipóteses que tem dados disponíveis.
+* Responder as perguntas de negócio.
 
 **Step 10. Deploy Modelo to Production:**
 * Inserir os dados da tabela de clientes no banco de dados AWS RDS.
-* Testar o Notebook final em ambiente local
-* Criar o servidor AWS EC2 e mandar o projeto através do github
-* Criar o processo automatico de execução  com o papermill e conectar o banco RDS ao Metabase.
+* Testar o Notebook final em ambiente local.
+* Criar o servidor AWS EC2 e mandar o projeto através do github.
+* Criar o processo automático de execução  com o papermill e conectar o banco RDS ao Metabase.
 * Criar Dashbord no Metabase.
 
 # 4. Top 3 Data Insights
@@ -116,7 +116,7 @@ Antes de testar os algoritmos fiz o estudo do espaço onde usei as técnicas de 
 Para a clusterização dos clientes foram testados 4 modelos de Machine Learning: 
 K-Means, Gaussian Mixture Model(GMM), Hierarchical Clustering(HC), DBSCAN
 
-A métrica de avaliação dos modelos foi a Silhouette Score. Ela mede o quão bem os pontos estão separados dentro dos clusters em comparação com a separação entre os clusters. Ela vaia de -1 a 1 e quannto mais próxima de 1, melhor é o número de clusters.
+A métrica de avaliação dos modelos foi a Silhouette Score. Ela mede o quão bem os pontos estão separados dentro dos clusters em comparação com a separação entre os clusters. Ela varia de -1 a 1 e quanto mais próxima de 1, melhor é o número de clusters.
 
 Os modelos foram treinados para valores de K de 2 até 25. Apesar de os melhores resultados terem dado com K próximo ao máximo, para a aplicação no negócio não faria sentido tantos clusters então levando em conta a possibilidade de uso pelo time de negócio e os melhores resultados da métrica de performance, o algoritmo escolhido foi o K-Means com 8 Clusters, com uma Silhouette Score de 0.45.
 
@@ -139,13 +139,13 @@ A lista com os clientes do grupo Insiders pode ser vista [aqui](reports/Insiders
 ![Dashboard readme](reports/figures/Programa-de-Insiders-Acompanhamento.png)
 
 # 7. Conclusions
-O objetivo de obter uma seleção de clientes mais valiosos para a empresa foi cumprido. As perguntas de negócio foram respondidas no [notebook](src/models/c10-deploy.ipynb) e também podem ser acompanhadas no Dashboard. Com as questões respndidas, o dashboard e os insights gerados, o time de marketing poderá tomar ações acertivas e gerar melhores resultados para a empresa.
+O objetivo de obter uma seleção de clientes mais valiosos para a empresa foi cumprido. As perguntas de negócio foram respondidas no [notebook](src/models/c10-deploy.ipynb) e também podem ser acompanhadas no Dashboard. Com as questões respondidas, o dashboard e os insights gerados, o time de marketing poderá tomar ações acertivas e gerar melhores resultados para a empresa.
 
 # 8. Lessons Learned
 - O funcionamento dos modelos de Clusterização e algumas métricas de avaliação dos modelos.
 - Estudo do espaço e redução de dimensionalidade, Embeddings.
 - Implementar um projeto na nuvem AWS usando vários serviços.
-- Criar Dashboard na ferramenta Metabase
+- Criar Dashboard na ferramenta Metabase.
 
 # 9. Next Steps to Improve
 - Em um próximo ciclo:
